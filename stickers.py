@@ -30,8 +30,8 @@ logger = logging.getLogger(__name__)
 
 try:
     import tgs
-except OSError:
-    logger.exception()
+except OSError as e:
+    logger.exception(e)
 
 warnings.simplefilter('error', Image.DecompressionBombWarning)
 
